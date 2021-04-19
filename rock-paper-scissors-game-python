@@ -31,6 +31,7 @@ player_one = input("Player One, enter your name: ")
 player_two = input("Player Two, enter your name: ")
 print(f"This is a 'rock paper scissors' game between {player_one} and {player_two}.\nBEGIN!!!")
 
+
 # Number of rounds done and number of rounds to go
 rounds = 0
 rounds_to_go = 4
@@ -46,24 +47,23 @@ while rounds <= 4:
         round.replace("rounds", "round")
 
     if player_one_play == paper and player_two_play == rock:
-        print(f"{player_one} wins this round. {rounds_to_go} {round} to go!")
+        print(f"{player_one} wins this round. Paper covers rock. {rounds_to_go} {round} to go!")
         player_one_score += 1
     elif player_one_play == rock and player_two_play == paper:
-        print(f"{player_two} wins this round. {rounds_to_go} {round} to go!")
+        print(f"{player_two} wins this round. Paper covers rock. {rounds_to_go} {round} to go!")
         player_two_score += 1
     elif player_one_play == paper and player_two_play == scissors:
-        print(f"{player_two} wins this round. {rounds_to_go} {round} to go!")
+        print(f"{player_two} wins this round. Scissors cuts paper. {rounds_to_go} {round} to go!")
         player_two_score += 1
     elif player_one_play == scissors and player_two_play == paper:
-        print(f"{player_one} wins this round. {rounds_to_go} {round} to go!")
+        print(f"{player_one} wins this round. Scissors cuts paper. {rounds_to_go} {round} to go!")
         player_one_score += 1
     elif player_one_play == rock and player_two_play == scissors:
-        print(f"{player_one} wins this round. {rounds_to_go} {round} to go!")
+        print(f"{player_one} wins this round. Rock crushes scissors. {rounds_to_go} {round} to go!")
         player_one_score += 1
     elif player_one_play == scissors and player_two_play == rock:
-        print(f"{player_two} wins this round. {rounds_to_go} {round} to go!")
+        print(f"{player_two} wins this round. Rock crushes scissors. {rounds_to_go} {round} to go!")
         player_two_score += 1
-
     # Display of the score if each player after every round
     print(f"{player_one}: {player_one_score} {player_two}: {player_two_score}")
     # Increment and reduction of the rounds
@@ -75,6 +75,7 @@ while rounds <= 4:
         continue
     else:
         break
+
 
 if player_one_score > player_two_score:
     print(f"{player_one} wins the tournament.")
