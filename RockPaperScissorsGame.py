@@ -43,7 +43,7 @@ while rounds <= 4:
     player_one_play = input(f"{player_one}, play: ")
     player_two_play = input(f"{player_two}, play: ")
     round = "rounds"
-    if rounds_to_go == 1:
+    if rounds_to_go >= 1:
         round.replace("rounds", "round")
 
     if player_one_play == paper and player_two_play == rock:
